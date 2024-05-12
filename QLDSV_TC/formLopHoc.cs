@@ -43,7 +43,12 @@ namespace QLDSV_TC
             this.SINHVIENTableAdapter.Fill(this.DS.SINHVIEN);
 
             macn = ((DataRowView)bds_LopHoc[0])["MAKHOA"].ToString();
-            cbxKhoa.DataSource = Program.bds_dspm;
+
+            // Lấy hai dòng đầu tiên từ bds_dspm
+            var firstTwoRows = Program.bds_dspm.Cast<DataRowView>().Take(2).ToList();
+
+            //cbxKhoa.DataSource = Program.bds_dspm;
+            cbxKhoa.DataSource = firstTwoRows;
             cbxKhoa.DisplayMember = "TENKHOA";
             cbxKhoa.ValueMember = "TENSERVER";
             cbxKhoa.SelectedIndex = Program.mKhoa;

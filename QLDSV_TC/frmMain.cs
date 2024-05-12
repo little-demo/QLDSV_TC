@@ -22,7 +22,6 @@ namespace QLDSV_TC
         private void frmMain_Load(object sender, EventArgs e)
         {
             HienThiMenu();
-            PhanQuyen();
         }
 
         private Form CheckExists(Type ftype)
@@ -46,19 +45,24 @@ namespace QLDSV_TC
             rb_DanhMuc.Visible = rib_BaoCao.Visible = true;
 
             //tiếp tục if trên ProgramGroup để bật tắt menu quyền hạn tương ứng
-            if (Program.mGroup == "PGV")
+            if (Program.mGroup.Equals("SV"))
             {
+                btnDangKi.Enabled = true;
+                btnDiem.Enabled = btnHocPhi.Enabled = btnLopHoc.Enabled = btnLopTC.Enabled = btnMonHoc.Enabled = btnSinhVien.Enabled = false; /*btnTaoTK.Enabled*/ 
                 rib_BaoCao.Visible = false;
-            } else
+            }
+            if (Program.mGroup.Equals("PKT"))
             {
-
+                btnHocPhi.Enabled = true;
+                btnDiem.Enabled = btnLopHoc.Enabled = btnLopTC.Enabled = btnMonHoc.Enabled = btnSinhVien.Enabled = btnDangKi.Enabled = false;
+                rib_BaoCao.Visible = false;
+            }
+            if (Program.mGroup.Equals("PGV") || Program.mGroup.Equals("KHOA"))
+            {
+                btnDangKi.Enabled = btnHocPhi.Enabled = false;
             }
         }
 
-        public void PhanQuyen()
-        {
-            
-        }
         private void btnDangNhap_ItemClick(object sender, ItemClickEventArgs e)
         {
             Form frm = this.CheckExists(typeof(frmDangNhap));
@@ -95,5 +99,16 @@ namespace QLDSV_TC
             }
         }
 
+        private void btnDangKi_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(formDangKyLTC));
+            if (frm != null) frm.Activate();
+            else
+            {
+                formDangKyLTC f = new formDangKyLTC();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
     }
 }

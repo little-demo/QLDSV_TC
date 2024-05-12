@@ -108,16 +108,22 @@ namespace QLDSV_TC
             if (Program.myReader == null) return;
             Program.myReader.Read(); //chỉ đọc 1 dòng (nếu có nhiều thì dùng vòng lặp)
 
-            Program.username = Program.myReader.GetString(0);
-            if (Convert.IsDBNull(Program.username))
+            Program.mGroup = Program.myReader.GetString(2);
+
+            if (isSinhVien == false)
             {
-                MessageBox.Show("Login bạn nhập không có quyền truy cập dữ liệu.\n Bạn xem lại username, password", "", MessageBoxButtons.OK);
-                return;
+                Program.mHoten = Program.myReader.GetString(1);
+                Program.username = Program.myReader.GetString(0);
             }
 
-            Program.mHoten = Program.myReader.GetString(1);
-            Program.mGroup = Program.myReader.GetString(2);
             Program.myReader.Close();
+
+            //Program.username = Program.myReader.GetString(0);
+            
+
+            //Program.mHoten = Program.myReader.GetString(1);
+            //Program.mGroup = Program.myReader.GetString(2);
+            
 
             //Nếu là sinh viên:
             string strlenh1 = "EXEC [dbo].[SP_LayThongTinSinhVien_DangNhap] '" + txtTaiKhoan.Text + "', '" + txtMatKhau.Text + "'";
@@ -130,6 +136,12 @@ namespace QLDSV_TC
             }
 
             reader.Read();
+
+            if (Convert.IsDBNull(Program.username))
+            {
+                MessageBox.Show("Login bạn nhập không có quyền truy cập dữ liệu.\n Bạn xem lại username, password", "", MessageBoxButtons.OK);
+                return;
+            }
 
             if (isSinhVien == true)
             {
@@ -160,5 +172,6 @@ namespace QLDSV_TC
         {
             isSinhVien = !isSinhVien;
         }
+
     }
 }
