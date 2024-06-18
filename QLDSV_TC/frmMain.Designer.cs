@@ -74,11 +74,11 @@
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 818);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 824);
             this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(5);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1650, 30);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1650, 24);
             // 
             // ribbon
             // 
@@ -117,7 +117,7 @@
             this.rb_DanhMuc,
             this.rib_BaoCao,
             this.rib_HeThong});
-            this.ribbon.Size = new System.Drawing.Size(1650, 209);
+            this.ribbon.Size = new System.Drawing.Size(1650, 177);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
             // barButtonItem1
@@ -183,7 +183,7 @@
             // 
             this.btnSinhVien.Caption = "SINH VIÊN";
             this.btnSinhVien.Id = 14;
-            this.btnSinhVien.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem9.ImageOptions.SvgImage")));
+            this.btnSinhVien.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSinhVien.ImageOptions.SvgImage")));
             this.btnSinhVien.Name = "btnSinhVien";
             // 
             // btnMonHoc
@@ -207,6 +207,7 @@
             this.btnDiem.Id = 17;
             this.btnDiem.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDiem.ImageOptions.SvgImage")));
             this.btnDiem.Name = "btnDiem";
+            this.btnDiem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDiem_ItemClick);
             // 
             // btnHocPhi
             // 
@@ -230,6 +231,7 @@
             this.btnDssvLTC.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDssvLTC.ImageOptions.Image")));
             this.btnDssvLTC.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnDssvLTC.ImageOptions.LargeImage")));
             this.btnDssvLTC.Name = "btnDssvLTC";
+            this.btnDssvLTC.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDssvLTC_ItemClick);
             // 
             // btnDsLTC
             // 
@@ -238,6 +240,7 @@
             this.btnDsLTC.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDsLTC.ImageOptions.Image")));
             this.btnDsLTC.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnDsLTC.ImageOptions.LargeImage")));
             this.btnDsLTC.Name = "btnDsLTC";
+            this.btnDsLTC.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDsLTC_ItemClick);
             // 
             // btnBangDiemMon
             // 
@@ -254,6 +257,7 @@
             this.btnPhieuDiemSV.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPhieuDiemSV.ImageOptions.Image")));
             this.btnPhieuDiemSV.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnPhieuDiemSV.ImageOptions.LargeImage")));
             this.btnPhieuDiemSV.Name = "btnPhieuDiemSV";
+            this.btnPhieuDiemSV.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPhieuDiemSV_ItemClick);
             // 
             // btnDsHocPhi
             // 
@@ -262,6 +266,7 @@
             this.btnDsHocPhi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDsHocPhi.ImageOptions.Image")));
             this.btnDsHocPhi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnDsHocPhi.ImageOptions.LargeImage")));
             this.btnDsHocPhi.Name = "btnDsHocPhi";
+            this.btnDsHocPhi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDsHocPhi_ItemClick);
             // 
             // barButtonItem8
             // 
@@ -350,28 +355,28 @@
             this.MANV,
             this.HOTEN,
             this.NHOM});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 792);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 802);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1650, 26);
+            this.statusStrip1.Size = new System.Drawing.Size(1650, 22);
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // MANV
             // 
             this.MANV.Name = "MANV";
-            this.MANV.Size = new System.Drawing.Size(51, 20);
+            this.MANV.Size = new System.Drawing.Size(41, 17);
             this.MANV.Text = "MAGV";
             // 
             // HOTEN
             // 
             this.HOTEN.Name = "HOTEN";
-            this.HOTEN.Size = new System.Drawing.Size(62, 20);
+            this.HOTEN.Size = new System.Drawing.Size(49, 17);
             this.HOTEN.Text = "HO TEN";
             // 
             // NHOM
             // 
             this.NHOM.Name = "NHOM";
-            this.NHOM.Size = new System.Drawing.Size(55, 20);
+            this.NHOM.Size = new System.Drawing.Size(45, 17);
             this.NHOM.Text = "NHOM";
             // 
             // ribbonPageGroup3
@@ -386,7 +391,7 @@
             // frmMain
             // 
             this.Appearance.Options.UseFont = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1650, 848);
             this.Controls.Add(this.statusStrip1);

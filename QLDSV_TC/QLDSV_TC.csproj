@@ -48,17 +48,31 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.Charts.v23.2.Core, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v23.2, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.Desktop.v23.2, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v23.2, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v23.2, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Drawing.v23.2, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v23.2.Core, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v23.2.Core, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v23.2.Core, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Printing.v23.2.Core, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v23.2.Core, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v23.2.Export, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Sparkline.v23.2.Core, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v23.2, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v23.2.UI, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v23.2, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v23.2, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v23.2, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v23.2, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v23.2.Core, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraGrid.v23.2, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v23.2, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v23.2, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v23.2, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v23.2.Extensions, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -93,6 +107,30 @@
     <Compile Include="formDangKyLTC.Designer.cs">
       <DependentUpon>formDangKyLTC.cs</DependentUpon>
     </Compile>
+    <Compile Include="formInDiemSV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formInDiemSV.Designer.cs">
+      <DependentUpon>formInDiemSV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formInDSDongHP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formInDSDongHP.Designer.cs">
+      <DependentUpon>formInDSDongHP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formInDSLTC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formInDSLTC.Designer.cs">
+      <DependentUpon>formInDSLTC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formInSVDKLTC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formInSVDKLTC.Designer.cs">
+      <DependentUpon>formInSVDKLTC.cs</DependentUpon>
+    </Compile>
     <Compile Include="formLopHoc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +142,12 @@
     </Compile>
     <Compile Include="formMonHoc.Designer.cs">
       <DependentUpon>formMonHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formNhapDiemSV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formNhapDiemSV.Designer.cs">
+      <DependentUpon>formNhapDiemSV.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDangNhap.cs">
       <SubType>Form</SubType>
@@ -119,14 +163,41 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="reportDSLTC.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reportDSLTC.Designer.cs">
+      <DependentUpon>reportDSLTC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reportSVDKLTC.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reportSVDKLTC.Designer.cs">
+      <DependentUpon>reportSVDKLTC.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="formDangKyLTC.resx">
       <DependentUpon>formDangKyLTC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formInDiemSV.resx">
+      <DependentUpon>formInDiemSV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formInDSDongHP.resx">
+      <DependentUpon>formInDSDongHP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formInDSLTC.resx">
+      <DependentUpon>formInDSLTC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formInSVDKLTC.resx">
+      <DependentUpon>formInSVDKLTC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formLopHoc.resx">
       <DependentUpon>formLopHoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formMonHoc.resx">
       <DependentUpon>formMonHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formNhapDiemSV.resx">
+      <DependentUpon>formNhapDiemSV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
@@ -144,6 +215,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="reportDSLTC.resx">
+      <DependentUpon>reportDSLTC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportSVDKLTC.resx">
+      <DependentUpon>reportSVDKLTC.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="DS.xsc">
       <DependentUpon>DS.xsd</DependentUpon>
     </None>

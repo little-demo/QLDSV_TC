@@ -110,5 +110,65 @@ namespace QLDSV_TC
                 f.Show();
             }
         }
+
+        private void btnDiem_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(formNhapDiemSV));
+            if (frm != null) frm.Activate();
+            else
+            {
+                formNhapDiemSV f = new formNhapDiemSV();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void btnDsLTC_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(formInDSLTC));
+            if (frm != null) frm.Activate();
+            else
+            {
+                formInDSLTC f = new formInDSLTC();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void btnDssvLTC_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(formInSVDKLTC));
+            if (frm != null) frm.Activate();
+            else
+            {
+                formInSVDKLTC f = new formInSVDKLTC();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void btnPhieuDiemSV_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(formInDiemSV));
+            if (frm != null) frm.Activate();
+            else
+            {
+                formInDiemSV f = new formInDiemSV();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void btnDsHocPhi_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(formInDSDongHP));
+            if (frm != null) frm.Activate();
+            else
+            {
+                formInDSDongHP f = new formInDSDongHP();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
     }
 }
