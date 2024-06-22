@@ -42,6 +42,8 @@ namespace QLDSV_TC
             this.MONHOCTableAdapter.Connection.ConnectionString = Program.connstr;
             this.MONHOCTableAdapter.Fill(this.DS.MONHOC);
 
+            panelControl2.Enabled = false;
+            btnGhi.Enabled = btnPhucHoi.Enabled = false;
         }
 
         private void btnThem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -51,9 +53,10 @@ namespace QLDSV_TC
 
             bds_MonHoc.AddNew();
 
-            btnThem.Enabled = btnSua.Enabled = btnXoa.Enabled = false;
+            btnThem.Enabled = btnSua.Enabled = btnXoa.Enabled = btnLamMoi.Enabled = false;
             btnGhi.Enabled = btnPhucHoi.Enabled = true;
             MONHOCGridControl.Enabled = false;
+            panelControl2.Enabled = true;
         }
 
         private void btnSua_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -65,9 +68,11 @@ namespace QLDSV_TC
             oldTenMonHoc = txbTenMonHoc.Text.Trim();
             txbMaMonHoc.Enabled = false;
             panelControl1.Enabled = true;
-            btnThem.Enabled = btnSua.Enabled = btnXoa.Enabled = btnPhucHoi.Enabled = false;
-            btnGhi.Enabled = true;
+            btnThem.Enabled = btnSua.Enabled = btnXoa.Enabled = btnLamMoi.Enabled = false;
+            btnGhi.Enabled = btnPhucHoi.Enabled = true;
             MONHOCGridControl.Enabled = false;
+            panelControl2.Enabled = true;
+            txbMaMonHoc.Enabled = false;
         }
 
         private void btnXoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -115,8 +120,10 @@ namespace QLDSV_TC
                     return;
                 }
                 MONHOCGridControl.Enabled = true;
-                btnThem.Enabled = btnSua.Enabled = btnXoa.Enabled = true;
+                btnThem.Enabled = btnSua.Enabled = btnXoa.Enabled = btnLamMoi.Enabled = true;
                 btnGhi.Enabled = btnPhucHoi.Enabled = false;
+                panelControl2.Enabled = false;
+                txbMaMonHoc.Enabled = true;
             }
             else
             {
@@ -129,10 +136,12 @@ namespace QLDSV_TC
             bds_MonHoc.CancelEdit();
             if (btnThem.Enabled == false) bds_MonHoc.Position = vitri;
             MONHOCGridControl.Enabled = true;
-            panelControl1.Enabled = false;
-            btnThem.Enabled = btnSua.Enabled = btnXoa.Enabled = true;
+            
+            btnThem.Enabled = btnSua.Enabled = btnXoa.Enabled = btnLamMoi.Enabled = true;
             btnGhi.Enabled = btnPhucHoi.Enabled = false;
-            formMonHoc_Load(sender, e);
+            panelControl2.Enabled = false;
+            txbMaMonHoc.Enabled = true;
+            //formMonHoc_Load(sender, e);
 
             // load lại cả form...
 
@@ -158,9 +167,12 @@ namespace QLDSV_TC
 
         private void btnHuy_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            bds_MonHoc.CancelEdit();
             MONHOCGridControl.Enabled = true;
             txbMaMonHoc.Enabled = true;
-            btnThem.Enabled = btnSua.Enabled = btnXoa.Enabled = btnGhi.Enabled = true;
+            panelControl2.Enabled=false;
+            btnThem.Enabled = btnSua.Enabled = btnXoa.Enabled = btnLamMoi.Enabled = true;
+            btnGhi.Enabled = btnPhucHoi.Enabled = false;
         }
 
         private void btnThoat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

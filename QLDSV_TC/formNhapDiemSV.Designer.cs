@@ -119,6 +119,7 @@
             this.btnThoat.TabIndex = 2;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnCapNhap
             // 
@@ -278,6 +279,7 @@
             this.gridColumn2.Caption = "Mã sinh viên";
             this.gridColumn2.FieldName = "MASV";
             this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.OptionsColumn.ReadOnly = true;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
             // 
@@ -316,9 +318,10 @@
             // 
             // gridColumn7
             // 
-            this.gridColumn7.Caption = "Điểm tổng kết";
+            this.gridColumn7.Caption = "Điểm hết môn";
             this.gridColumn7.FieldName = "DIEM_TK";
             this.gridColumn7.Name = "gridColumn7";
+            this.gridColumn7.OptionsColumn.ReadOnly = true;
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 6;
             // 

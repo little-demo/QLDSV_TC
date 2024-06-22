@@ -82,7 +82,10 @@ namespace QLDSV_TC
         private void cbxNienKhoa_SelectedIndexChanged(object sender, EventArgs e)
         {
             loadcbHocKi(cbxNienKhoa.Text);
-            cbxHocKi.SelectedIndex = 0;
+            if (cbxHocKi.Items.Count > 0)
+            {
+                cbxHocKi.SelectedIndex = 0;
+            }
         }
 
         private void btnTimNKHK_Click(object sender, EventArgs e)

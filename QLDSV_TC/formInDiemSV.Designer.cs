@@ -69,6 +69,7 @@
             this.btnThoat.TabIndex = 2;
             this.btnThoat.Text = "THOÁT";
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // formInDiemSV
             // 
@@ -80,7 +81,7 @@
             this.Controls.Add(this.txtMaSV);
             this.Controls.Add(this.label1);
             this.Name = "formInDiemSV";
-            this.Text = "formInDiemSV";
+            this.Text = "In phiếu điểm SV";
             this.Load += new System.EventHandler(this.formInDiemSV_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -14,6 +14,8 @@ namespace QLDSV_TC
 {
     public partial class formInDiemSV : DevExpress.XtraEditors.XtraForm
     {
+
+        int type = 0;
         public formInDiemSV()
         {
             InitializeComponent();
@@ -21,7 +23,12 @@ namespace QLDSV_TC
 
         private void formInDiemSV_Load(object sender, EventArgs e)
         {
-
+            if (Program.mGroup.Equals("SV"))
+            {
+                type = 1;
+                txtMaSV.Text = Program.username;
+                txtMaSV.ReadOnly = true;
+            }
         }
 
         private bool ValidatorSV()
@@ -75,8 +82,7 @@ namespace QLDSV_TC
         {
             if (ValidatorSV() == false)
             {
-                string msv = txtMaSV.Text;
-                int type = 0;
+                
                 if (Program.mGroup.Equals("KHOA"))
                 {
                     type = 1;
@@ -85,11 +91,13 @@ namespace QLDSV_TC
                 {
                     type = 0;
                 }
-                //XrptPhieuDiemSV rpt = new XrptPhieuDiemSV(msv, type);
-                //rpt.lbMaSV.Text = msv;
+                
+                string msv = txtMaSV.Text;
+                reportDiemSV rpt = new reportDiemSV(msv, type);
+                rpt.lbMaSV.Text = msv;
 
-                //ReportPrintTool print = new ReportPrintTool(rpt);
-                //print.ShowPreviewDialog();
+                ReportPrintTool print = new ReportPrintTool(rpt);
+                print.ShowPreviewDialog();
 
 
 
@@ -98,6 +106,11 @@ namespace QLDSV_TC
             {
                 return;
             }
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

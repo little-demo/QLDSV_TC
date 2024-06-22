@@ -77,19 +77,39 @@ namespace QLDSV_TC
         public static DataTable ExecSqlDataTable(String cmd)
         {
             DataTable dt = new DataTable();
-            if (Program.conn.State == ConnectionState.Closed) Program.conn.Open();
-            SqlDataAdapter da = new SqlDataAdapter(cmd, Program.conn);
             try
             {
-                da.Fill(dt); Program.conn.Close();
-                return dt;
+                if (Program.conn.State == ConnectionState.Closed)
+                {
+                    Program.conn.Open();
+                    Console.WriteLine("Kết nối mở thành công.");
+                }
+
+                Console.WriteLine("Câu lệnh SQL: " + cmd);
+                SqlDataAdapter da = new SqlDataAdapter(cmd, Program.conn);
+
+                da.Fill(dt);
+                Console.WriteLine("Số hàng trả về: " + dt.Rows.Count);
             }
             catch (SqlException ex)
             {
-                Program.conn.Close();
-                MessageBox.Show(ex.Message);
-                return null;
+                Console.WriteLine("Lỗi SQL: " + ex.Message);
+                MessageBox.Show("Lỗi khi thực hiện câu lệnh SQL: " + ex.Message);
             }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Lỗi khác: " + ex.Message);
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+            finally
+            {
+                if (Program.conn.State == ConnectionState.Open)
+                {
+                    Program.conn.Close();
+                    Console.WriteLine("Kết nối đã đóng.");
+                }
+            }
+            return dt;
 
         }
 

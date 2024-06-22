@@ -122,7 +122,10 @@ namespace QLDSV_TC
         private void cbxNienKhoa_SelectedIndexChanged(object sender, EventArgs e)
         {
             loadcbHocKi(cbxNienKhoa.Text);
-            cbxHocKi.SelectedIndex = 0;
+            if (cbxHocKi.Items.Count > 0)
+            {
+                cbxHocKi.SelectedIndex = 0;
+            }
         }
 
         private void cbxHocKi_SelectedIndexChanged(object sender, EventArgs e)
@@ -230,6 +233,11 @@ namespace QLDSV_TC
             this.bds_Diem.DataSource = diemTable;
             this.gridDiem.DataSource = this.bds_Diem;
             return;
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

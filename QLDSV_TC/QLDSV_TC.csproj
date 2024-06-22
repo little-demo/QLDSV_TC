@@ -56,6 +56,7 @@
     <Reference Include="DevExpress.Drawing.v23.2, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Office.v23.2.Core, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Pdf.v23.2.Core, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v23.2.Drawing, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.PivotGrid.v23.2.Core, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Printing.v23.2.Core, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.RichEdit.v23.2.Core, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -80,6 +81,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Runtime.Remoting" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Transactions" />
@@ -107,6 +109,24 @@
     <Compile Include="formDangKyLTC.Designer.cs">
       <DependentUpon>formDangKyLTC.cs</DependentUpon>
     </Compile>
+    <Compile Include="formHocPhi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formHocPhi.Designer.cs">
+      <DependentUpon>formHocPhi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formInBDMH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formInBDMH.Designer.cs">
+      <DependentUpon>formInBDMH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formInBDTK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formInBDTK.Designer.cs">
+      <DependentUpon>formInBDTK.cs</DependentUpon>
+    </Compile>
     <Compile Include="formInDiemSV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +145,12 @@
     <Compile Include="formInDSLTC.Designer.cs">
       <DependentUpon>formInDSLTC.cs</DependentUpon>
     </Compile>
+    <Compile Include="formInHocPhiLop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formInHocPhiLop.Designer.cs">
+      <DependentUpon>formInHocPhiLop.cs</DependentUpon>
+    </Compile>
     <Compile Include="formInSVDKLTC.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +163,12 @@
     <Compile Include="formLopHoc.Designer.cs">
       <DependentUpon>formLopHoc.cs</DependentUpon>
     </Compile>
+    <Compile Include="formLopTinChi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formLopTinChi.Designer.cs">
+      <DependentUpon>formLopTinChi.cs</DependentUpon>
+    </Compile>
     <Compile Include="formMonHoc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +180,18 @@
     </Compile>
     <Compile Include="formNhapDiemSV.Designer.cs">
       <DependentUpon>formNhapDiemSV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formSinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formSinhVien.Designer.cs">
+      <DependentUpon>formSinhVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formTaoLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formTaoLogin.Designer.cs">
+      <DependentUpon>formTaoLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDangNhap.cs">
       <SubType>Form</SubType>
@@ -163,11 +207,35 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="reportBDMH.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reportBDMH.Designer.cs">
+      <DependentUpon>reportBDMH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reportBDTK.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reportBDTK.Designer.cs">
+      <DependentUpon>reportBDTK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reportDiemSV.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reportDiemSV.Designer.cs">
+      <DependentUpon>reportDiemSV.cs</DependentUpon>
+    </Compile>
     <Compile Include="reportDSLTC.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="reportDSLTC.Designer.cs">
       <DependentUpon>reportDSLTC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reportHPLopcs.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reportHPLopcs.Designer.cs">
+      <DependentUpon>reportHPLopcs.cs</DependentUpon>
     </Compile>
     <Compile Include="reportSVDKLTC.cs">
       <SubType>Component</SubType>
@@ -178,6 +246,15 @@
     <EmbeddedResource Include="formDangKyLTC.resx">
       <DependentUpon>formDangKyLTC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="formHocPhi.resx">
+      <DependentUpon>formHocPhi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formInBDMH.resx">
+      <DependentUpon>formInBDMH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formInBDTK.resx">
+      <DependentUpon>formInBDTK.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formInDiemSV.resx">
       <DependentUpon>formInDiemSV.cs</DependentUpon>
     </EmbeddedResource>
@@ -187,17 +264,29 @@
     <EmbeddedResource Include="formInDSLTC.resx">
       <DependentUpon>formInDSLTC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="formInHocPhiLop.resx">
+      <DependentUpon>formInHocPhiLop.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formInSVDKLTC.resx">
       <DependentUpon>formInSVDKLTC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formLopHoc.resx">
       <DependentUpon>formLopHoc.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="formLopTinChi.resx">
+      <DependentUpon>formLopTinChi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formMonHoc.resx">
       <DependentUpon>formMonHoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formNhapDiemSV.resx">
       <DependentUpon>formNhapDiemSV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formSinhVien.resx">
+      <DependentUpon>formSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formTaoLogin.resx">
+      <DependentUpon>formTaoLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
@@ -215,8 +304,20 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="reportBDMH.resx">
+      <DependentUpon>reportBDMH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportBDTK.resx">
+      <DependentUpon>reportBDTK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportDiemSV.resx">
+      <DependentUpon>reportDiemSV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="reportDSLTC.resx">
       <DependentUpon>reportDSLTC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportHPLopcs.resx">
+      <DependentUpon>reportHPLopcs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="reportSVDKLTC.resx">
       <DependentUpon>reportSVDKLTC.cs</DependentUpon>

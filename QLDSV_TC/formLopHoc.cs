@@ -56,6 +56,9 @@ namespace QLDSV_TC
             {
                 cbxKhoa.Enabled = false;
             }
+
+            panelControl3.Enabled = false;
+            btnGhi.Enabled = btnPhucHoi.Enabled = false;
         }
 
         private void cbxGroup_SelectedIndexChanged(object sender, EventArgs e)
@@ -92,12 +95,16 @@ namespace QLDSV_TC
             vitri = bds_LopHoc.Position;
             _flagOptionLop = "ADD";
 
-            panelControl2.Enabled = false;
+            
             bds_LopHoc.AddNew();
             txbMaKhoa.Text = macn;
-            btnThem.Enabled = btnSua.Enabled = btnXoa.Enabled = false;
+            txbMaLop.Enabled = true;
+            btnThem.Enabled = btnSua.Enabled = btnXoa.Enabled = btnLamMoi.Enabled = false;
             btnGhi.Enabled = btnPhucHoi.Enabled = true;
             lOPGridControl.Enabled = false;
+            panelControl3.Enabled = true;
+            cbxKhoa.Enabled = false;
+            txbMaKhoa.Enabled = false;
         }
 
         private void btnGhi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -117,9 +124,10 @@ namespace QLDSV_TC
                     return;
                 }
                 lOPGridControl.Enabled = true;
-                btnThem.Enabled = btnSua.Enabled = btnXoa.Enabled = true;
+                btnThem.Enabled = btnSua.Enabled = btnXoa.Enabled = btnLamMoi.Enabled = true;
                 btnGhi.Enabled = btnPhucHoi.Enabled = false;
-                panelControl2.Enabled = true;
+                panelControl3.Enabled = false;
+                cbxKhoa.Enabled = true;
             }
             else
             {
@@ -269,9 +277,12 @@ namespace QLDSV_TC
             _oldTenLop = this.txbTenLop.Text.Trim();
             txbMaLop.Enabled = false;
             panelControl2.Enabled = true;
-            btnThem.Enabled = btnSua.Enabled = btnXoa.Enabled = btnPhucHoi.Enabled = false;
-            btnGhi.Enabled = true;
+            btnThem.Enabled = btnSua.Enabled = btnXoa.Enabled = btnLamMoi.Enabled = false;
+            btnGhi.Enabled = btnPhucHoi.Enabled = true;
             lOPGridControl.Enabled = false;
+            panelControl3.Enabled = true;
+            cbxKhoa.Enabled = false;
+            txbMaKhoa.Enabled = false;
         }
 
         private void btnXoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -313,9 +324,12 @@ namespace QLDSV_TC
             if (btnThem.Enabled == false) bds_LopHoc.Position = vitri;
             lOPGridControl.Enabled = true;
             panelControl2.Enabled = true;
-            btnThem.Enabled = btnSua.Enabled = btnXoa.Enabled = true;
+            btnThem.Enabled = btnSua.Enabled = btnXoa.Enabled = btnLamMoi.Enabled = true;
             btnGhi.Enabled = btnPhucHoi.Enabled = false;
-            formLopHoc_Load(sender, e);
+            cbxKhoa.Enabled = true;
+            panelControl3.Enabled = false;
+
+            //formLopHoc_Load(sender, e);
 
             if (vitri > 0)
             {
@@ -338,9 +352,14 @@ namespace QLDSV_TC
 
         private void btnHuy_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            bds_LopHoc.CancelEdit();
             panelControl2.Enabled = true;
             lOPGridControl.Enabled = true;
-            btnThem.Enabled = btnSua.Enabled = btnXoa.Enabled = btnGhi.Enabled = true;
+            btnThem.Enabled = btnSua.Enabled = btnXoa.Enabled = btnLamMoi.Enabled = true;
+            btnGhi.Enabled = btnPhucHoi.Enabled = false;
+            cbxKhoa.Enabled = true;
+            panelControl3.Enabled = false;
+
         }
     }
 }
